@@ -1,0 +1,158 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Ammara Saleem — Professional Resume</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg:#f7fbff; --card:#ffffff; --muted:#6b7280; --accent:#7dd3fc; --accent-2:#a7f3d0; --ink:#0f1724; --glass: rgba(15,23,36,0.03);
+    }
+    *{box-sizing:border-box}
+    body{font-family:Inter,system-ui,Arial;background:linear-gradient(180deg,#f8fbff 0%, #eef7ff 100%);color:var(--ink);margin:0;line-height:1.45;-webkit-font-smoothing:antialiased}
+    .container{max-width:980px;margin:36px auto;padding:28px}
+    header{display:flex;align-items:center;gap:20px}
+    .avatar{width:110px;height:110px;border-radius:16px;background:linear-gradient(135deg,var(--accent),var(--accent-2));display:flex;align-items:center;justify-content:center;font-size:36px;font-weight:700;color:#04323a;box-shadow:0 8px 30px rgba(2,6,23,0.06);overflow:hidden}
+    h1{font-family:'Playfair Display',serif;margin:0;font-size:34px}
+    .meta{color:var(--muted);font-size:14px}
+    .card{background:var(--card);padding:20px;border-radius:14px;margin-top:22px;box-shadow:0 8px 30px rgba(2,6,23,0.04);border:1px solid rgba(11,20,30,0.02)}
+
+    /* animated accent line */
+    .accent-line{height:6px;border-radius:999px;background:linear-gradient(90deg,var(--accent),#60a5fa);box-shadow:0 6px 20px rgba(99,102,241,0.06);transform-origin:left;animation:grow 1200ms ease forwards}
+    @keyframes grow{from{transform:scaleX(0)}to{transform:scaleX(1)}}
+
+    /* skill bars */
+    .skill{margin:10px 0}
+    .bar{background:var(--glass);height:12px;border-radius:999px;overflow:hidden}
+    .fill{height:100%;border-radius:999px;background:linear-gradient(90deg,var(--accent),var(--accent-2));transform-origin:left;animation:fill 1200ms ease forwards}
+    @keyframes fill{from{transform:scaleX(0)}to{transform:scaleX(1)}}
+
+    .grid{display:grid;grid-template-columns:1fr 320px;gap:22px}
+    section{margin-top:20px}
+    h3{margin:0 0 8px 0}
+    .muted{color:var(--muted)}
+
+    .timeline{position:relative;padding-left:18px}
+    .timeline:before{content:'';position:absolute;left:6px;top:6px;bottom:6px;width:2px;background:linear-gradient(180deg,rgba(15,23,36,0.06),rgba(124,58,237,0.04));border-radius:3px}
+    .entry{margin-bottom:18px;position:relative;padding:10px 12px;border-radius:12px;background:linear-gradient(180deg,rgba(255,255,255,0.6),rgba(255,255,255,0.7));box-shadow:0 6px 18px rgba(11,20,30,0.03);transition:transform .28s ease}
+    .entry:hover{transform:translateY(-6px)}
+    .entry .dot{position:absolute;left:-2px;top:12px;width:12px;height:12px;border-radius:50%;background:var(--accent);box-shadow:0 4px 14px rgba(125,211,252,0.2)}
+
+    .badge{display:inline-block;padding:6px 10px;border-radius:999px;background:linear-gradient(90deg,rgba(125,211,252,0.12),rgba(167,243,208,0.12));color:var(--ink);font-weight:700;font-size:13px}
+
+    .congrats{background:linear-gradient(180deg,#ffffff, #f6fbff);padding:22px;border-radius:12px;border:1px solid rgba(15,23,36,0.03);margin-top:18px}
+    .congrats h2{margin-top:0;color:var(--ink)}
+
+    .apology{display:flex;align-items:center;justify-content:center;flex-direction:column;padding:40px;border-radius:16px;margin-top:22px;background:linear-gradient(180deg,#fff6fb,#fffaf6);border:1px solid rgba(15,23,36,0.02);box-shadow:0 10px 30px rgba(15,23,36,0.04)}
+    .apology h1{font-size:40px;margin:0;letter-spacing:0.4px;font-weight:800;color:#111;animation:float 2200ms ease-in-out infinite alternate}
+    .heart{font-size:34px;margin-top:12px;color:#0b1220}
+    @keyframes float{to{transform:translateY(-6px);filter:drop-shadow(0 18px 40px rgba(2,6,23,0.06))}}
+
+    .cta{display:inline-block;padding:10px 16px;border-radius:10px;border:1px solid rgba(15,23,36,0.04);background:linear-gradient(90deg,rgba(255,255,255,0.9), rgba(255,255,255,0.95));text-decoration:none;color:var(--ink)}
+
+    /* subtle floating decor */
+    .float-blob{position:absolute;right:-40px;top:-40px;width:180px;height:180px;border-radius:40px;background:linear-gradient(135deg,#eefcff,#dffafe);filter:blur(32px);opacity:0.9;transform:rotate(14deg)}
+
+    @media (max-width:880px){.grid{grid-template-columns:1fr}.avatar{width:86px;height:86px;font-size:28px}}
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div style="position:relative;margin-bottom:8px"><div class="float-blob" aria-hidden></div></div>
+    <header>
+      <div class="avatar">AS</div>
+      <div>
+        <h1>Ammara Saleem</h1>
+        <div class="meta">Optometrist • MS (Public Health) — Monitoring Manager (Dengue Surveillance) • Islāmābād</div>
+        <div style="margin-top:8px"><span class="badge">Open to opportunities</span></div>
+      </div>
+    </header>
+
+    <div class="card grid">
+      <div>
+        <h3>Professional Summary</h3>
+        <p class="muted">Public-health focused optometrist with hands-on clinical experience and emerging expertise in field surveillance, data validation, and health promotion. Skilled at patient care, diagnostic imaging, and coordinating field teams for public health interventions.</p>
+
+        <section style="margin-top:18px">
+          <h4 style="margin-bottom:8px">Raw Capabilities</h4>
+          <ul class="muted">
+            <li>Field monitoring & digital surveillance for vector-borne diseases</li>
+            <li>Clinical optometry: refraction, slit-lamp, A/B-scan, surgical assistance</li>
+            <li>Health promotion, community outreach & patient counselling</li>
+            <li>Data analysis, reporting, and quality assurance</li>
+          </ul>
+        </section>
+
+        <section style="margin-top:16px">
+          <h4 style="color:var(--ink)">Key Skills</h4>
+          <div class="skill"><div style="font-size:13px;">Public Health & Surveillance</div><div class="bar" aria-hidden><div class="fill" style="width:86%"></div></div></div>
+          <div class="skill"><div style="font-size:13px;">Clinical Optometry</div><div class="bar" aria-hidden><div class="fill" style="width:80%"></div></div></div>
+          <div class="skill"><div style="font-size:13px;">Data Analysis & Reporting</div><div class="bar" aria-hidden><div class="fill" style="width:72%"></div></div></div>
+          <div class="skill"><div style="font-size:13px;">Communication & Coordination</div><div class="bar" aria-hidden><div class="fill" style="width:78%"></div></div></div>
+        </section>
+
+        <section>
+          <h4 style="margin-top:18px">Experience</h4>
+          <div class="timeline">
+            <div class="entry">
+              <div class="dot"></div>
+              <h4 style="margin:0">Monitoring Manager — Ministry of National Health Services</h4>
+              <p class="muted" style="margin:6px 0 0">Aug 2025 – Present · Islāmābād (Contract)<br>Monitor dengue surveillance field data and generate activity-based monitoring reports to support decision-making.</p>
+            </div>
+
+            <div class="entry">
+              <div class="dot"></div>
+              <h4 style="margin:0">Optometric Assistant / Optometrist — HBS General Hospital</h4>
+              <p class="muted" style="margin:6px 0 0">Oct 2022 – Jul 2024 · Islamabad<br>Performed refraction, assisted in surgeries, conducted slit-lamp exams and diagnostic scans (A/B-scan).</p>
+            </div>
+          </div>
+        </section>
+
+      </div>
+
+      <aside>
+        <div style="padding:16px;border-radius:12px;background:linear-gradient(180deg,#ffffff,#fbfdff);border:1px solid rgba(15,23,36,0.02);box-shadow:0 6px 20px rgba(11,20,30,0.02)">
+          <h4 style="margin:0 0 8px 0">Education</h4>
+          <p class="muted" style="margin:8px 0 6px">MS Public Health — Health Services Academy (Mar 2025 – Sep 2026)</p>
+          <p class="muted" style="margin:0 0 10px">BS Optometry — Pakistan Institute of Rehabilitation Sciences / Isra University (2018–2022) • Grade: A</p>
+
+          <h4 style="margin-top:12px">Contact</h4>
+          <p class="muted" style="margin:6px 0">LinkedIn: <a href="https://www.linkedin.com/in/ammarasaleem/" target="_blank" style="color:var(--accent);text-decoration:none">ammarasaleem</a></p>
+          <p class="muted" style="margin:6px 0">Location: Islāmābād</p>
+	<p class="muted" style="margin:6px 0">Email: is.ammara.saleem@gmail.com</p>
+
+
+          <div style="margin-top:12px;display:flex;gap:8px;flex-wrap:wrap">
+            <a class="cta" href="#" download="Ammara_Saleem_CV.pdf">Download PDF</a>
+            <a class="cta" href="#top">Print-friendly</a>
+          </div>
+        </div>
+      </aside>
+    </div>
+
+    <div class="card congrats">
+      <div class="accent-line" style="width:40%"></div>
+      <h2>Congratulations on your new job, baby</h2>
+      <p class="muted">i hope you succeed &amp; overachieve in every possible scenario, may Allah give you the help &amp; guide you through his wisdom to become the best of what you do. you now have stepped outside the bubble — you will see new things and meet new people, you might fall in love again or not, remember that i will always be there for you & wanting you from my soul.</p>
+    </div>
+
+    <div class="apology">
+      <h1>I am sorry for everything, I love you</h1>
+      <div class="heart">&#9829;</div>
+    </div>
+
+    <footer style="margin-top:18px;text-align:center;color:var(--muted);font-size:13px">
+      <p>Allah Thumhen Kamyab kare. Khush Raho.</p>
+    </footer>
+  </div>
+
+  <script>
+    // small progressive animations after load
+    window.addEventListener('load',()=>{
+      document.querySelectorAll('.fill').forEach(el=>{el.style.transform='scaleX(1)'});
+      document.querySelectorAll('.accent-line').forEach(el=>{el.style.transform='scaleX(1)'});
+    });
+  </script>
+</body>
+</html>
