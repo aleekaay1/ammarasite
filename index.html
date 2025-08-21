@@ -1,158 +1,988 @@
-<!doctype html>
-<html lang="en">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Ammara Saleem — Professional Resume</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
-  <style>
-    :root{
-      --bg:#f7fbff; --card:#ffffff; --muted:#6b7280; --accent:#7dd3fc; --accent-2:#a7f3d0; --ink:#0f1724; --glass: rgba(15,23,36,0.03);
-    }
-    *{box-sizing:border-box}
-    body{font-family:Inter,system-ui,Arial;background:linear-gradient(180deg,#f8fbff 0%, #eef7ff 100%);color:var(--ink);margin:0;line-height:1.45;-webkit-font-smoothing:antialiased}
-    .container{max-width:980px;margin:36px auto;padding:28px}
-    header{display:flex;align-items:center;gap:20px}
-    .avatar{width:110px;height:110px;border-radius:16px;background:linear-gradient(135deg,var(--accent),var(--accent-2));display:flex;align-items:center;justify-content:center;font-size:36px;font-weight:700;color:#04323a;box-shadow:0 8px 30px rgba(2,6,23,0.06);overflow:hidden}
-    h1{font-family:'Playfair Display',serif;margin:0;font-size:34px}
-    .meta{color:var(--muted);font-size:14px}
-    .card{background:var(--card);padding:20px;border-radius:14px;margin-top:22px;box-shadow:0 8px 30px rgba(2,6,23,0.04);border:1px solid rgba(11,20,30,0.02)}
+<!DOCTYPE html><html lang="en"><head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Ammara Saleem - A Journey of Vision and Dedication</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mermaid/11.5.0/mermaid.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;1,400&amp;family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'ophthalmic-blue': '#1e3a8a',
+                        'soft-lavender': '#e0e7ff',
+                        'warm-grey': '#6b7280',
+                        'accent-gold': '#f59e0b'
+                    },
+                    fontFamily: {
+                        'serif': ['Crimson Text', 'serif'],
+                        'sans': ['Inter', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .gradient-overlay {
+            background: linear-gradient(135deg, rgba(30, 58, 138, 0.9) 0%, rgba(30, 58, 138, 0.7) 100%);
+        }
+        
+        .beating-heart {
+            animation: heartbeat 1.5s ease-in-out infinite;
+        }
+        
+        @keyframes heartbeat {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+        }
+        
+        .timeline-item {
+            transition: all 0.3s ease;
+        }
+        
+        .timeline-item:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(30, 58, 138, 0.15);
+        }
+        
+        .skill-bar {
+            transition: width 1s ease-in-out;
+        }
+        
+        .hero-text {
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+        
+        .section-divider {
+            background: linear-gradient(90deg, transparent, rgba(30, 58, 138, 0.3), transparent);
+        }
 
-    /* animated accent line */
-    .accent-line{height:6px;border-radius:999px;background:linear-gradient(90deg,var(--accent),#60a5fa);box-shadow:0 6px 20px rgba(99,102,241,0.06);transform-origin:left;animation:grow 1200ms ease forwards}
-    @keyframes grow{from{transform:scaleX(0)}to{transform:scaleX(1)}}
+        .mermaid-container {
+            display: flex;
+            justify-content: center;
+            min-height: 300px;
+            max-height: 800px;
+            background: #ffffff;
+            border: 2px solid #e5e7eb;
+            border-radius: 12px;
+            padding: 30px;
+            margin: 30px 0;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+            position: relative;
+            overflow: hidden;
+        }
 
-    /* skill bars */
-    .skill{margin:10px 0}
-    .bar{background:var(--glass);height:12px;border-radius:999px;overflow:hidden}
-    .fill{height:100%;border-radius:999px;background:linear-gradient(90deg,var(--accent),var(--accent-2));transform-origin:left;animation:fill 1200ms ease forwards}
-    @keyframes fill{from{transform:scaleX(0)}to{transform:scaleX(1)}}
+        .mermaid-container .mermaid {
+            width: 100%;
+            max-width: 100%;
+            height: 100%;
+            cursor: grab;
+            transition: transform 0.3s ease;
+            transform-origin: center center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            touch-action: none;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+        }
 
-    .grid{display:grid;grid-template-columns:1fr 320px;gap:22px}
-    section{margin-top:20px}
-    h3{margin:0 0 8px 0}
-    .muted{color:var(--muted)}
+        .mermaid-container .mermaid svg {
+            max-width: 100%;
+            height: 100%;
+            display: block;
+            margin: 0 auto;
+        }
 
-    .timeline{position:relative;padding-left:18px}
-    .timeline:before{content:'';position:absolute;left:6px;top:6px;bottom:6px;width:2px;background:linear-gradient(180deg,rgba(15,23,36,0.06),rgba(124,58,237,0.04));border-radius:3px}
-    .entry{margin-bottom:18px;position:relative;padding:10px 12px;border-radius:12px;background:linear-gradient(180deg,rgba(255,255,255,0.6),rgba(255,255,255,0.7));box-shadow:0 6px 18px rgba(11,20,30,0.03);transition:transform .28s ease}
-    .entry:hover{transform:translateY(-6px)}
-    .entry .dot{position:absolute;left:-2px;top:12px;width:12px;height:12px;border-radius:50%;background:var(--accent);box-shadow:0 4px 14px rgba(125,211,252,0.2)}
+        .mermaid-container .mermaid:active {
+            cursor: grabbing;
+        }
 
-    .badge{display:inline-block;padding:6px 10px;border-radius:999px;background:linear-gradient(90deg,rgba(125,211,252,0.12),rgba(167,243,208,0.12));color:var(--ink);font-weight:700;font-size:13px}
+        .mermaid-container.zoomed .mermaid {
+            height: 100%;
+            width: 100%;
+            cursor: grab;
+        }
 
-    .congrats{background:linear-gradient(180deg,#ffffff, #f6fbff);padding:22px;border-radius:12px;border:1px solid rgba(15,23,36,0.03);margin-top:18px}
-    .congrats h2{margin-top:0;color:var(--ink)}
+        .mermaid-controls {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            display: flex;
+            gap: 10px;
+            z-index: 20;
+            background: rgba(255, 255, 255, 0.95);
+            padding: 8px;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
 
-    .apology{display:flex;align-items:center;justify-content:center;flex-direction:column;padding:40px;border-radius:16px;margin-top:22px;background:linear-gradient(180deg,#fff6fb,#fffaf6);border:1px solid rgba(15,23,36,0.02);box-shadow:0 10px 30px rgba(15,23,36,0.04)}
-    .apology h1{font-size:40px;margin:0;letter-spacing:0.4px;font-weight:800;color:#111;animation:float 2200ms ease-in-out infinite alternate}
-    .heart{font-size:34px;margin-top:12px;color:#0b1220}
-    @keyframes float{to{transform:translateY(-6px);filter:drop-shadow(0 18px 40px rgba(2,6,23,0.06))}}
+        .mermaid-control-btn {
+            background: #ffffff;
+            border: 1px solid #d1d5db;
+            border-radius: 6px;
+            padding: 10px;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            color: #374151;
+            font-size: 14px;
+            min-width: 36px;
+            height: 36px;
+            text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
 
-    .cta{display:inline-block;padding:10px 16px;border-radius:10px;border:1px solid rgba(15,23,36,0.04);background:linear-gradient(90deg,rgba(255,255,255,0.9), rgba(255,255,255,0.95));text-decoration:none;color:var(--ink)}
+        .mermaid-control-btn:hover {
+            background: #f8fafc;
+            border-color: #3b82f6;
+            color: #3b82f6;
+            transform: translateY(-1px);
+        }
 
-    /* subtle floating decor */
-    .float-blob{position:absolute;right:-40px;top:-40px;width:180px;height:180px;border-radius:40px;background:linear-gradient(135deg,#eefcff,#dffafe);filter:blur(32px);opacity:0.9;transform:rotate(14deg)}
+        .mermaid-control-btn:active {
+            transform: scale(0.95);
+        }
+        
+        @media (max-width: 1024px) {
+            .mermaid-control-btn:not(.reset-zoom) {
+                display: none;
+            }
+            .mermaid-controls {
+                top: auto;
+                bottom: 15px;
+                right: 15px;
+            }
+        }
+    </style>
+  </head>
 
-    @media (max-width:880px){.grid{grid-template-columns:1fr}.avatar{width:86px;height:86px;font-size:28px}}
-  </style>
-</head>
-<body>
-  <div class="container">
-    <div style="position:relative;margin-bottom:8px"><div class="float-blob" aria-hidden></div></div>
-    <header>
-      <div class="avatar">AS</div>
-      <div>
-        <h1>Ammara Saleem</h1>
-        <div class="meta">Optometrist • MS (Public Health) — Monitoring Manager (Dengue Surveillance) • Islāmābād</div>
-        <div style="margin-top:8px"><span class="badge">Open to opportunities</span></div>
+  <body class="bg-white font-sans overflow-x-hidden">
+    <!-- Fixed Navigation -->
+    <nav class="fixed left-0 top-0 h-full w-72 bg-ophthalmic-blue text-white p-8 z-40 transform -translate-x-full lg:translate-x-0 transition-transform duration-300 lg:block" id="sidebar">
+      <div class="mb-12">
+        <h3 class="text-xl font-serif font-semibold mb-4">Navigation</h3>
+        <ul class="space-y-3">
+          <li>
+            <a href="#hero" class="block py-2 px-3 rounded-lg hover:bg-white hover:bg-opacity-10 transition-colors">Introduction</a>
+          </li>
+          <li>
+            <a href="#about" class="block py-2 px-3 rounded-lg hover:bg-white hover:bg-opacity-10 transition-colors">Personal Qualities</a>
+          </li>
+          <li>
+            <a href="#professional" class="block py-2 px-3 rounded-lg hover:bg-white hover:bg-opacity-10 transition-colors">Professional Journey</a>
+          </li>
+          <li>
+            <a href="#education" class="block py-2 px-3 rounded-lg hover:bg-white hover:bg-opacity-10 transition-colors">Academic Excellence</a>
+          </li>
+          <li>
+            <a href="#skills" class="block py-2 px-3 rounded-lg hover:bg-white hover:bg-opacity-10 transition-colors">Skills &amp; Expertise</a>
+          </li>
+          <li>
+            <a href="#message" class="block py-2 px-3 rounded-lg hover:bg-white hover:bg-opacity-10 transition-colors">Personal Message</a>
+          </li>
+        </ul>
       </div>
-    </header>
+    </nav>
 
-    <div class="card grid">
-      <div>
-        <h3>Professional Summary</h3>
-        <p class="muted">Public-health focused optometrist with hands-on clinical experience and emerging expertise in field surveillance, data validation, and health promotion. Skilled at patient care, diagnostic imaging, and coordinating field teams for public health interventions.</p>
+    <!-- Mobile Menu Button -->
+    <button class="lg:hidden fixed top-4 left-4 z-50 bg-ophthalmic-blue text-white p-3 rounded-lg shadow-lg" onclick="toggleSidebar()">
+      <i class="fas fa-bars"></i>
+    </button>
 
-        <section style="margin-top:18px">
-          <h4 style="margin-bottom:8px">Raw Capabilities</h4>
-          <ul class="muted">
-            <li>Field monitoring & digital surveillance for vector-borne diseases</li>
-            <li>Clinical optometry: refraction, slit-lamp, A/B-scan, surgical assistance</li>
-            <li>Health promotion, community outreach & patient counselling</li>
-            <li>Data analysis, reporting, and quality assurance</li>
-          </ul>
-        </section>
+    <!-- Backdrop for mobile sidebar -->
+    <div id="backdrop" class="fixed inset-0 bg-black bg-opacity-50 z-40 hidden lg:hidden"></div>
 
-        <section style="margin-top:16px">
-          <h4 style="color:var(--ink)">Key Skills</h4>
-          <div class="skill"><div style="font-size:13px;">Public Health & Surveillance</div><div class="bar" aria-hidden><div class="fill" style="width:86%"></div></div></div>
-          <div class="skill"><div style="font-size:13px;">Clinical Optometry</div><div class="bar" aria-hidden><div class="fill" style="width:80%"></div></div></div>
-          <div class="skill"><div style="font-size:13px;">Data Analysis & Reporting</div><div class="bar" aria-hidden><div class="fill" style="width:72%"></div></div></div>
-          <div class="skill"><div style="font-size:13px;">Communication & Coordination</div><div class="bar" aria-hidden><div class="fill" style="width:78%"></div></div></div>
-        </section>
+    <!-- Main Content -->
+    <main class="lg:ml-72">
+      <!-- Hero Section -->
+      <section id="hero" class="relative min-h-screen flex items-center justify-center overflow-hidden">
+        <div class="absolute inset-0 z-0">
+          <img src="https://kimi-web-img.moonshot.cn/img/images.storm.mg/1ddb3d4a2befcd7d315aec9bc28578c4ddea2418" alt="Abstract visualization of human eye anatomy" class="w-full h-full object-cover opacity-20" size="wallpaper" aspect="wide" style="photo" query="human eye anatomy abstract" referrerpolicy="no-referrer" data-modified="1" data-score="0.00"/>
+          <div class="gradient-overlay absolute inset-0"></div>
+        </div>
 
-        <section>
-          <h4 style="margin-top:18px">Experience</h4>
-          <div class="timeline">
-            <div class="entry">
-              <div class="dot"></div>
-              <h4 style="margin:0">Monitoring Manager — Ministry of National Health Services</h4>
-              <p class="muted" style="margin:6px 0 0">Aug 2025 – Present · Islāmābād (Contract)<br>Monitor dengue surveillance field data and generate activity-based monitoring reports to support decision-making.</p>
-            </div>
+        <div class="relative z-10 text-center text-white px-4 sm:px-6 max-w-4xl">
+          <h1 class="hero-text text-4xl sm:text-5xl md:text-7xl font-serif italic mb-6">
+            Welcome to Ammara&#39;s <span class="text-accent-gold">Epi-History</span>
+          </h1>
+          <p class="hero-text text-lg sm:text-xl md:text-2xl font-light mb-8 max-w-2xl mx-auto">
+            A journey through the life and achievements of Ammara Saleem
+          </p>
+          <a href="#about" class="inline-block bg-white text-ophthalmic-blue px-8 py-4 rounded-full font-semibold hover:bg-opacity-90 transition-all duration-300 transform hover:scale-105">
+            Discover More
+          </a>
+        </div>
+      </section>
 
-            <div class="entry">
-              <div class="dot"></div>
-              <h4 style="margin:0">Optometric Assistant / Optometrist — HBS General Hospital</h4>
-              <p class="muted" style="margin:6px 0 0">Oct 2022 – Jul 2024 · Islamabad<br>Performed refraction, assisted in surgeries, conducted slit-lamp exams and diagnostic scans (A/B-scan).</p>
-            </div>
+      <!-- About Section -->
+      <section id="about" class="py-20 px-6">
+        <div class="max-w-6xl mx-auto">
+          <div class="text-center mb-16">
+            <h2 class="text-4xl md:text-5xl font-serif text-ophthalmic-blue mb-6">The Woman Behind the Achievements</h2>
+            <div class="section-divider h-px w-32 mx-auto mb-8"></div>
+            <p class="text-lg text-warm-grey max-w-3xl mx-auto">
+              Beyond her professional accomplishments lies a remarkable individual whose qualities inspire those around her.
+            </p>
           </div>
-        </section>
 
-      </div>
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div class="about-item bg-white p-8 rounded-2xl shadow-lg border border-soft-lavender">
+              <div class="w-16 h-16 bg-ophthalmic-blue rounded-full flex items-center justify-center mb-6 mx-auto">
+                <i class="fas fa-heart text-white text-2xl"></i>
+              </div>
+              <h3 class="text-2xl font-serif text-ophthalmic-blue mb-4 text-center">Beautiful</h3>
+              <p class="text-warm-grey text-center leading-relaxed">
+                A stunning woman whose beauty is matched only by her kindness. Her radiant spirit reflects the depth of her inner beauty.
+              </p>
+            </div>
 
-      <aside>
-        <div style="padding:16px;border-radius:12px;background:linear-gradient(180deg,#ffffff,#fbfdff);border:1px solid rgba(15,23,36,0.02);box-shadow:0 6px 20px rgba(11,20,30,0.02)">
-          <h4 style="margin:0 0 8px 0">Education</h4>
-          <p class="muted" style="margin:8px 0 6px">MS Public Health — Health Services Academy (Mar 2025 – Sep 2026)</p>
-          <p class="muted" style="margin:0 0 10px">BS Optometry — Pakistan Institute of Rehabilitation Sciences / Isra University (2018–2022) • Grade: A</p>
+            <div class="about-item bg-white p-8 rounded-2xl shadow-lg border border-soft-lavender">
+              <div class="w-16 h-16 bg-ophthalmic-blue rounded-full flex items-center justify-center mb-6 mx-auto">
+                <i class="fas fa-brain text-white text-2xl"></i>
+              </div>
+              <h3 class="text-2xl font-serif text-ophthalmic-blue mb-4 text-center">Intellectual</h3>
+              <p class="text-warm-grey text-center leading-relaxed">
+                Her sharp intellect and dedication to learning set her apart. A mind that constantly seeks knowledge and understanding.
+              </p>
+            </div>
 
-          <h4 style="margin-top:12px">Contact</h4>
-          <p class="muted" style="margin:6px 0">LinkedIn: <a href="https://www.linkedin.com/in/ammarasaleem/" target="_blank" style="color:var(--accent);text-decoration:none">ammarasaleem</a></p>
-          <p class="muted" style="margin:6px 0">Location: Islāmābād</p>
-	<p class="muted" style="margin:6px 0">Email: is.ammara.saleem@gmail.com</p>
+            <div class="about-item bg-white p-8 rounded-2xl shadow-lg border border-soft-lavender">
+              <div class="w-16 h-16 bg-ophthalmic-blue rounded-full flex items-center justify-center mb-6 mx-auto">
+                <i class="fas fa-hands-helping text-white text-2xl"></i>
+              </div>
+              <h3 class="text-2xl font-serif text-ophthalmic-blue mb-4 text-center">Lovely</h3>
+              <p class="text-warm-grey text-center leading-relaxed">
+                A heart full of love for her family, friends, and patients. Her compassion touches everyone she meets.
+              </p>
+            </div>
 
-
-          <div style="margin-top:12px;display:flex;gap:8px;flex-wrap:wrap">
-            <a class="cta" href="#" download="Ammara_Saleem_CV.pdf">Download PDF</a>
-            <a class="cta" href="#top">Print-friendly</a>
+            <div class="about-item bg-white p-8 rounded-2xl shadow-lg border border-soft-lavender">
+              <div class="w-16 h-16 bg-ophthalmic-blue rounded-full flex items-center justify-center mb-6 mx-auto">
+                <i class="fas fa-shield-alt text-white text-2xl"></i>
+              </div>
+              <h3 class="text-2xl font-serif text-ophthalmic-blue mb-4 text-center">Honest</h3>
+              <p class="text-warm-grey text-center leading-relaxed">
+                Integrity defines her actions both personally and professionally. A foundation of trust and reliability.
+              </p>
+            </div>
           </div>
         </div>
-      </aside>
-    </div>
+      </section>
 
-    <div class="card congrats">
-      <div class="accent-line" style="width:40%"></div>
-      <h2>Congratulations on your new job, baby</h2>
-      <p class="muted">i hope you succeed &amp; overachieve in every possible scenario, may Allah give you the help &amp; guide you through his wisdom to become the best of what you do. you now have stepped outside the bubble — you will see new things and meet new people, you might fall in love again or not, remember that i will always be there for you & wanting you from my soul.</p>
-    </div>
+      <!-- Professional Journey -->
+      <section id="professional" class="py-20 px-6 bg-gray-50">
+        <div class="max-w-6xl mx-auto">
+          <div class="text-center mb-16">
+            <h2 class="text-4xl md:text-5xl font-serif text-ophthalmic-blue mb-6">Professional Journey</h2>
+            <div class="section-divider h-px w-32 mx-auto mb-8"></div>
+            <p class="text-lg text-warm-grey max-w-3xl mx-auto">
+              A career defined by service, excellence, and an unwavering commitment to public health.
+            </p>
+          </div>
 
-    <div class="apology">
-      <h1>I am sorry for everything, I love you</h1>
-      <div class="heart">&#9829;</div>
-    </div>
+          <!-- Career Timeline -->
+          <div class="relative">
+            <div class="absolute left-1/2 transform -translate-x-1/2 w-1 h-full bg-ophthalmic-blue opacity-30 hidden md:block"></div>
 
-    <footer style="margin-top:18px;text-align:center;color:var(--muted);font-size:13px">
-      <p>Allah Thumhen Kamyab kare. Khush Raho.</p>
-    </footer>
-  </div>
+            <div class="timeline-item relative mb-12 md:ml-0 md:pl-0 pl-8">
+              <div class="absolute left-0 top-6 w-4 h-4 bg-ophthalmic-blue rounded-full border-4 border-white shadow-lg md:hidden"></div>
+              <div class="absolute left-1/2 transform -translate-x-1/2 w-4 h-4 bg-ophthalmic-blue rounded-full border-4 border-white shadow-lg hidden md:block"></div>
+              <div class="bg-white p-8 rounded-2xl shadow-lg ml-8 md:ml-0 md:w-5/12 md:float-right">
+                <div class="flex items-center mb-4">
+                  <i class="fas fa-hospital text-ophthalmic-blue text-2xl mr-4"></i>
+                  <div>
+                    <h3 class="text-xl font-semibold text-ophthalmic-blue">HBS General Hospital</h3>
+                    <p class="text-warm-grey">Oct 2022 - Jul 2024</p>
+                  </div>
+                </div>
+                <h4 class="text-lg font-semibold mb-3">Optometrist &amp; Optometric Assistant</h4>
+                <p class="text-warm-grey mb-4">
+                  Gained invaluable clinical experience providing comprehensive eye care services, including refraction, foreign body removal, slit lamp examinations, and assisting in eye surgeries.
+                </p>
+                <div class="flex flex-wrap gap-2">
+                  <span class="bg-soft-lavender text-ophthalmic-blue px-3 py-1 rounded-full text-sm">Patient Care</span>
+                  <span class="bg-soft-lavender text-ophthalmic-blue px-3 py-1 rounded-full text-sm">Clinical Procedures</span>
+                  <span class="bg-soft-lavender text-ophthalmic-blue px-3 py-1 rounded-full text-sm">Diagnostic Equipment</span>
+                </div>
+              </div>
+            </div>
 
-  <script>
-    // small progressive animations after load
-    window.addEventListener('load',()=>{
-      document.querySelectorAll('.fill').forEach(el=>{el.style.transform='scaleX(1)'});
-      document.querySelectorAll('.accent-line').forEach(el=>{el.style.transform='scaleX(1)'});
-    });
-  </script>
-</body>
-</html>
+            <div class="timeline-item relative mb-12 md:mr-0 md:pr-0 pr-8">
+              <div class="absolute right-0 top-6 w-4 h-4 bg-accent-gold rounded-full border-4 border-white shadow-lg md:hidden"></div>
+              <div class="absolute left-1/2 transform -translate-x-1/2 w-4 h-4 bg-accent-gold rounded-full border-4 border-white shadow-lg hidden md:block"></div>
+              <div class="bg-white p-8 rounded-2xl shadow-lg mr-8 md:mr-0 md:w-5/12 md:float-left">
+                <div class="flex items-center mb-4">
+                  <i class="fas fa-building text-accent-gold text-2xl mr-4"></i>
+                  <div>
+                    <h3 class="text-xl font-semibold text-accent-gold">Ministry of National Health Services</h3>
+                    <p class="text-warm-grey">Aug 2025 - Present</p>
+                  </div>
+                </div>
+                <h4 class="text-lg font-semibold mb-3">Monitoring Manager</h4>
+                <p class="text-warm-grey mb-4">
+                  Leading national dengue surveillance efforts, monitoring field activities, ensuring data accuracy, and generating performance reports to support evidence-based decision making.
+                </p>
+                <div class="flex flex-wrap gap-2">
+                  <span class="bg-yellow-100 text-yellow-800 px-3 py-1 rounded-full text-sm">Public Health</span>
+                  <span class="bg-yellow-100 text-yellow-800 px-3 py-1 rounded-full text-sm">Data Analysis</span>
+                  <span class="bg-yellow-100 text-yellow-800 px-3 py-1 rounded-full text-sm">Team Leadership</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="clear-both"></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Current Role Focus -->
+      <section class="py-16 px-6">
+        <div class="max-w-4xl mx-auto">
+          <div class="bg-gradient-to-r from-ophthalmic-blue to-blue-700 rounded-3xl p-8 md:p-12 text-white">
+            <div class="text-center mb-8">
+              <i class="fas fa-chart-line text-4xl mb-4"></i>
+              <h3 class="text-3xl font-serif mb-4">Current Impact</h3>
+              <p class="text-blue-100">Leading national dengue surveillance and control efforts</p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+              <div class="text-center">
+                <div class="w-16 h-16 bg-white bg-opacity-20 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <i class="fas fa-search text-2xl"></i>
+                </div>
+                <h4 class="font-semibold mb-2">Surveillance</h4>
+                <p class="text-sm text-blue-100">Monitoring daily field activities through digital reporting systems</p>
+              </div>
+
+              <div class="text-center">
+                <div class="w-16 h-16 bg-white bg-opacity-20 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <i class="fas fa-check-circle text-2xl"></i>
+                </div>
+                <h4 class="font-semibold mb-2">Quality Assurance</h4>
+                <p class="text-sm text-blue-100">Ensuring adherence to protocols and quality standards</p>
+              </div>
+
+              <div class="text-center">
+                <div class="w-16 h-16 bg-white bg-opacity-20 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <i class="fas fa-file-alt text-2xl"></i>
+                </div>
+                <h4 class="font-semibold mb-2">Reporting</h4>
+                <p class="text-sm text-blue-100">Generating performance reports for strategic decision-making</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Education Section -->
+      <section id="education" class="py-20 px-6 bg-gray-50">
+        <div class="max-w-6xl mx-auto">
+          <div class="text-center mb-16">
+            <h2 class="text-4xl md:text-5xl font-serif text-ophthalmic-blue mb-6">Academic Excellence</h2>
+            <div class="section-divider h-px w-32 mx-auto mb-8"></div>
+            <p class="text-lg text-warm-grey max-w-3xl mx-auto">
+              A strong foundation built on rigorous academic pursuit and continuous learning.
+            </p>
+          </div>
+
+          <div class="grid lg:grid-cols-2 gap-12">
+            <div class="bg-white p-8 rounded-2xl shadow-lg">
+              <div class="flex items-start mb-6">
+                <div class="w-12 h-12 bg-accent-gold rounded-full flex items-center justify-center mr-4 flex-shrink-0">
+                  <i class="fas fa-graduation-cap text-white"></i>
+                </div>
+                <div>
+                  <h3 class="text-xl font-semibold text-ophthalmic-blue mb-2">Master of Science in Public Health</h3>
+                  <p class="text-warm-grey mb-1">Health Services Academy</p>
+                  <p class="text-sm text-warm-grey">Mar 2025 - Sep 2026</p>
+                </div>
+              </div>
+              <p class="text-warm-grey mb-4">
+                Currently pursuing advanced studies with a focus on Health Promotion and Policy Making, bridging clinical experience with population health expertise.
+              </p>
+              <div class="flex flex-wrap gap-2">
+                <span class="bg-orange-100 text-orange-800 px-3 py-1 rounded-full text-sm">Health Promotion</span>
+                <span class="bg-orange-100 text-orange-800 px-3 py-1 rounded-full text-sm">Policy Making</span>
+                <span class="bg-orange-100 text-orange-800 px-3 py-1 rounded-full text-sm">Epidemiology</span>
+              </div>
+            </div>
+
+            <div class="bg-white p-8 rounded-2xl shadow-lg">
+              <div class="flex items-start mb-6">
+                <div class="w-12 h-12 bg-ophthalmic-blue rounded-full flex items-center justify-center mr-4 flex-shrink-0">
+                  <i class="fas fa-eye text-white"></i>
+                </div>
+                <div>
+                  <h3 class="text-xl font-semibold text-ophthalmic-blue mb-2">Bachelor of Science in Optometry</h3>
+                  <p class="text-warm-grey mb-1">Pakistan Institute of Rehabilitation Sciences</p>
+                  <p class="text-sm text-warm-grey">Sep 2018 - Sep 2022 | Grade: A</p>
+                </div>
+              </div>
+              <p class="text-warm-grey mb-4">
+                Comprehensive clinical training in vision sciences, ocular anatomy, and optometric procedures, providing the foundation for professional practice.
+              </p>
+              <div class="flex flex-wrap gap-2">
+                <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">Vision Science</span>
+                <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">Clinical Optometry</span>
+                <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">Patient Care</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Education Path Diagram -->
+          <div class="mt-16">
+            <h3 class="text-2xl font-serif text-ophthalmic-blue text-center mb-8">Educational Journey</h3>
+            <div class="mermaid-container">
+              <div class="mermaid-controls">
+                <button class="mermaid-control-btn zoom-in" title="放大">
+                  <i class="fas fa-search-plus"></i>
+                </button>
+                <button class="mermaid-control-btn zoom-out" title="缩小">
+                  <i class="fas fa-search-minus"></i>
+                </button>
+                <button class="mermaid-control-btn reset-zoom" title="重置">
+                  <i class="fas fa-expand-arrows-alt"></i>
+                </button>
+                <button class="mermaid-control-btn fullscreen" title="全屏查看">
+                  <i class="fas fa-expand"></i>
+                </button>
+              </div>
+              <div class="mermaid" id="education-mermaid">
+                graph LR
+                A[&#34;BS Optometry
+                <br/>2018-2022
+                <br/>Grade: A&#34;] --&gt; B[&#34;Clinical Experience
+                <br/>HBS General Hospital
+                <br/>2022-2024&#34;]
+                B --&gt; C[&#34;MS Public Health
+                <br/>2025-2026
+                <br/>In Progress&#34;]
+                C --&gt; D[&#34;Current Role
+                <br/>Monitoring Manager
+                <br/>Ministry of Health&#34;]
+
+                style A fill:#e0e7ff,stroke:#1e3a8a,stroke-width:3px,color:#1e3a8a
+                style B fill:#fef3c7,stroke:#f59e0b,stroke-width:3px,color:#92400e
+                style C fill:#dcfce7,stroke:#16a34a,stroke-width:3px,color:#166534
+                style D fill:#fce7f3,stroke:#ec4899,stroke-width:3px,color:#be185d
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Skills Section -->
+      <section id="skills" class="py-20 px-6">
+        <div class="max-w-6xl mx-auto">
+          <div class="text-center mb-16">
+            <h2 class="text-4xl md:text-5xl font-serif text-ophthalmic-blue mb-6">Core Skills &amp; Expertise</h2>
+            <div class="section-divider h-px w-32 mx-auto mb-8"></div>
+          </div>
+
+          <div class="grid lg:grid-cols-3 gap-8">
+            <div class="bg-white p-8 rounded-2xl shadow-lg">
+              <div class="w-16 h-16 bg-ophthalmic-blue rounded-full flex items-center justify-center mb-6 mx-auto">
+                <i class="fas fa-eye text-white text-2xl"></i>
+              </div>
+              <h3 class="text-xl font-semibold text-ophthalmic-blue mb-4 text-center">Clinical Optometry</h3>
+              <div class="space-y-4">
+                <div>
+                  <div class="flex justify-between mb-2">
+                    <span class="text-sm text-warm-grey">Refraction &amp; Diagnosis</span>
+                    <span class="text-sm text-ophthalmic-blue">95%</span>
+                  </div>
+                  <div class="bg-gray-200 rounded-full h-2">
+                    <div class="skill-bar bg-ophthalmic-blue h-2 rounded-full" style="width: 95%"></div>
+                  </div>
+                </div>
+                <div>
+                  <div class="flex justify-between mb-2">
+                    <span class="text-sm text-warm-grey">Slit Lamp Examination</span>
+                    <span class="text-sm text-ophthalmic-blue">90%</span>
+                  </div>
+                  <div class="bg-gray-200 rounded-full h-2">
+                    <div class="skill-bar bg-ophthalmic-blue h-2 rounded-full" style="width: 90%"></div>
+                  </div>
+                </div>
+                <div>
+                  <div class="flex justify-between mb-2">
+                    <span class="text-sm text-warm-grey">A/B Scan Ultrasonography</span>
+                    <span class="text-sm text-ophthalmic-blue">85%</span>
+                  </div>
+                  <div class="bg-gray-200 rounded-full h-2">
+                    <div class="skill-bar bg-ophthalmic-blue h-2 rounded-full" style="width: 85%"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="bg-white p-8 rounded-2xl shadow-lg">
+              <div class="w-16 h-16 bg-accent-gold rounded-full flex items-center justify-center mb-6 mx-auto">
+                <i class="fas fa-chart-bar text-white text-2xl"></i>
+              </div>
+              <h3 class="text-xl font-semibold text-accent-gold mb-4 text-center">Public Health</h3>
+              <div class="space-y-4">
+                <div>
+                  <div class="flex justify-between mb-2">
+                    <span class="text-sm text-warm-grey">Health Policy</span>
+                    <span class="text-sm text-accent-gold">88%</span>
+                  </div>
+                  <div class="bg-gray-200 rounded-full h-2">
+                    <div class="skill-bar bg-accent-gold h-2 rounded-full" style="width: 88%"></div>
+                  </div>
+                </div>
+                <div>
+                  <div class="flex justify-between mb-2">
+                    <span class="text-sm text-warm-grey">Epidemiology</span>
+                    <span class="text-sm text-accent-gold">92%</span>
+                  </div>
+                  <div class="bg-gray-200 rounded-full h-2">
+                    <div class="skill-bar bg-accent-gold h-2 rounded-full" style="width: 92%"></div>
+                  </div>
+                </div>
+                <div>
+                  <div class="flex justify-between mb-2">
+                    <span class="text-sm text-warm-grey">Health Promotion</span>
+                    <span class="text-sm text-accent-gold">90%</span>
+                  </div>
+                  <div class="bg-gray-200 rounded-full h-2">
+                    <div class="skill-bar bg-accent-gold h-2 rounded-full" style="width: 90%"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="bg-white p-8 rounded-2xl shadow-lg">
+              <div class="w-16 h-16 bg-green-600 rounded-full flex items-center justify-center mb-6 mx-auto">
+                <i class="fas fa-users text-white text-2xl"></i>
+              </div>
+              <h3 class="text-xl font-semibold text-green-600 mb-4 text-center">Leadership</h3>
+              <div class="space-y-4">
+                <div>
+                  <div class="flex justify-between mb-2">
+                    <span class="text-sm text-warm-grey">Team Management</span>
+                    <span class="text-sm text-green-600">87%</span>
+                  </div>
+                  <div class="bg-gray-200 rounded-full h-2">
+                    <div class="skill-bar bg-green-600 h-2 rounded-full" style="width: 87%"></div>
+                  </div>
+                </div>
+                <div>
+                  <div class="flex justify-between mb-2">
+                    <span class="text-sm text-warm-grey">Data Analysis</span>
+                    <span class="text-sm text-green-600">94%</span>
+                  </div>
+                  <div class="bg-gray-200 rounded-full h-2">
+                    <div class="skill-bar bg-green-600 h-2 rounded-full" style="width: 94%"></div>
+                  </div>
+                </div>
+                <div>
+                  <div class="flex justify-between mb-2">
+                    <span class="text-sm text-warm-grey">Project Coordination</span>
+                    <span class="text-sm text-green-600">89%</span>
+                  </div>
+                  <div class="bg-gray-200 rounded-full h-2">
+                    <div class="skill-bar bg-green-600 h-2 rounded-full" style="width: 89%"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Personal Message -->
+      <section id="message" class="py-20 px-6 bg-ophthalmic-blue text-white">
+        <div class="max-w-4xl mx-auto text-center">
+          <div class="mb-12">
+            <i class="fas fa-heart text-6xl text-red-400 beating-heart mb-8"></i>
+            <h2 class="text-4xl md:text-5xl font-serif mb-8">A Personal Message</h2>
+          </div>
+
+          <div class="space-y-12">
+            <div class="bg-white bg-opacity-10 p-8 rounded-2xl backdrop-blur-sm">
+              <h3 class="text-2xl font-serif mb-4 text-accent-gold">Congratulations</h3>
+              <p class="text-xl leading-relaxed">
+                Congratulations on your new job, baby. I hope you succeed and overachieve in every possible scenario.
+                May Allah give you the help and guide you through His wisdom to become the best of what you do.
+              </p>
+            </div>
+
+            <div class="bg-white bg-opacity-10 p-8 rounded-2xl backdrop-blur-sm">
+              <h3 class="text-2xl font-serif mb-4 text-accent-gold">New Beginnings</h3>
+              <p class="text-xl leading-relaxed">
+                You now have stepped into outside the bubble completely. You will see new things, meet different people,
+                but I&#39;ll be here for you always. This is your time to shine, to grow, and to make your mark on the world.
+              </p>
+            </div>
+
+            <div class="bg-white bg-opacity-10 p-8 rounded-2xl backdrop-blur-sm">
+              <h3 class="text-2xl font-serif mb-4 text-accent-gold">Forever Yours</h3>
+              <p class="text-xl leading-relaxed">
+                I am sorry for everything.
+                <span class="text-red-400 font-bold">I love you</span>
+                <i class="fas fa-heart text-red-400 ml-2 beating-heart"></i>
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Footer -->
+      <footer class="py-12 px-6 bg-gray-900 text-white">
+        <div class="max-w-4xl mx-auto text-center">
+          <div class="mb-8">
+            <img src="https://kimi-web-img.moonshot.cn/img/png.pngtree.com/59b2578f17a2791e50e175e469a9e2ca4ce1eafa.png" alt="Minimalist optometry symbol" class="w-16 h-16 mx-auto mb-4 opacity-60" size="small" aspect="square" color="blue" style="clipart" query="minimalist optometry symbol" referrerpolicy="no-referrer" data-modified="1" data-score="0.00"/>
+          </div>
+          <p class="text-gray-400 mb-4">
+            A tribute to Ammara Saleem - A journey of vision, dedication, and love.
+          </p>
+          <p class="text-sm text-gray-500">
+            Created with love and admiration • 2025
+          </p>
+        </div>
+      </footer>
+    </main>
+
+    <script>
+        // Initialize Mermaid
+        document.addEventListener('DOMContentLoaded', function() {
+            mermaid.initialize({
+                startOnLoad: true,
+                theme: 'base',
+                themeVariables: {
+                    primaryColor: '#1e3a8a',
+                    primaryTextColor: '#1e3a8a',
+                    primaryBorderColor: '#1e3a8a',
+                    lineColor: '#6b7280',
+                    secondaryColor: '#f59e0b',
+                    tertiaryColor: '#e0e7ff',
+                    background: 'transparent',
+                    mainBkg: '#ffffff',
+                    secondBkg: '#fef3c7',
+                    tertiaryBkg: '#e0e7ff'
+                },
+                flowchart: {
+                    useMaxWidth: true,
+                    htmlLabels: true,
+                    curve: 'basis'
+                }
+            });
+            
+            // Initialize Mermaid Controls for zoom and pan
+            initializeMermaidControls();
+        });
+
+        // Initialize Mermaid Controls for zoom and pan
+        function initializeMermaidControls() {
+            const containers = document.querySelectorAll('.mermaid-container');
+
+            containers.forEach(container => {
+            const mermaidElement = container.querySelector('.mermaid');
+            let scale = 1;
+            let isDragging = false;
+            let startX, startY, translateX = 0, translateY = 0;
+
+            // 触摸相关状态
+            let isTouch = false;
+            let touchStartTime = 0;
+            let initialDistance = 0;
+            let initialScale = 1;
+            let isPinching = false;
+
+            // Zoom controls
+            const zoomInBtn = container.querySelector('.zoom-in');
+            const zoomOutBtn = container.querySelector('.zoom-out');
+            const resetBtn = container.querySelector('.reset-zoom');
+            const fullscreenBtn = container.querySelector('.fullscreen');
+
+            function updateTransform() {
+                mermaidElement.style.transform = `translate(${translateX}px, ${translateY}px) scale(${scale})`;
+
+                if (scale > 1) {
+                container.classList.add('zoomed');
+                } else {
+                container.classList.remove('zoomed');
+                }
+
+                mermaidElement.style.cursor = isDragging ? 'grabbing' : 'grab';
+            }
+
+            if (zoomInBtn) {
+                zoomInBtn.addEventListener('click', () => {
+                scale = Math.min(scale * 1.25, 4);
+                updateTransform();
+                });
+            }
+
+            if (zoomOutBtn) {
+                zoomOutBtn.addEventListener('click', () => {
+                scale = Math.max(scale / 1.25, 0.3);
+                if (scale <= 1) {
+                    translateX = 0;
+                    translateY = 0;
+                }
+                updateTransform();
+                });
+            }
+
+            if (resetBtn) {
+                resetBtn.addEventListener('click', () => {
+                scale = 1;
+                translateX = 0;
+                translateY = 0;
+                updateTransform();
+                });
+            }
+
+            if (fullscreenBtn) {
+                fullscreenBtn.addEventListener('click', () => {
+                if (container.requestFullscreen) {
+                    container.requestFullscreen();
+                } else if (container.webkitRequestFullscreen) {
+                    container.webkitRequestFullscreen();
+                } else if (container.msRequestFullscreen) {
+                    container.msRequestFullscreen();
+                }
+                });
+            }
+
+            // Mouse Events
+            mermaidElement.addEventListener('mousedown', (e) => {
+                if (isTouch) return; // 如果是触摸设备，忽略鼠标事件
+
+                isDragging = true;
+                startX = e.clientX - translateX;
+                startY = e.clientY - translateY;
+                mermaidElement.style.cursor = 'grabbing';
+                updateTransform();
+                e.preventDefault();
+            });
+
+            document.addEventListener('mousemove', (e) => {
+                if (isDragging && !isTouch) {
+                translateX = e.clientX - startX;
+                translateY = e.clientY - startY;
+                updateTransform();
+                }
+            });
+
+            document.addEventListener('mouseup', () => {
+                if (isDragging && !isTouch) {
+                isDragging = false;
+                mermaidElement.style.cursor = 'grab';
+                updateTransform();
+                }
+            });
+
+            document.addEventListener('mouseleave', () => {
+                if (isDragging && !isTouch) {
+                isDragging = false;
+                mermaidElement.style.cursor = 'grab';
+                updateTransform();
+                }
+            });
+
+            // 获取两点之间的距离
+            function getTouchDistance(touch1, touch2) {
+                return Math.hypot(
+                touch2.clientX - touch1.clientX,
+                touch2.clientY - touch1.clientY
+                );
+            }
+
+            // Touch Events - 触摸事件处理
+            mermaidElement.addEventListener('touchstart', (e) => {
+                isTouch = true;
+                touchStartTime = Date.now();
+
+                if (e.touches.length === 1) {
+                // 单指拖动
+                isPinching = false;
+                isDragging = true;
+
+                const touch = e.touches[0];
+                startX = touch.clientX - translateX;
+                startY = touch.clientY - translateY;
+
+                } else if (e.touches.length === 2) {
+                // 双指缩放
+                isPinching = true;
+                isDragging = false;
+
+                const touch1 = e.touches[0];
+                const touch2 = e.touches[1];
+                initialDistance = getTouchDistance(touch1, touch2);
+                initialScale = scale;
+                }
+
+                e.preventDefault();
+            }, { passive: false });
+
+            mermaidElement.addEventListener('touchmove', (e) => {
+                if (e.touches.length === 1 && isDragging && !isPinching) {
+                // 单指拖动
+                const touch = e.touches[0];
+                translateX = touch.clientX - startX;
+                translateY = touch.clientY - startY;
+                updateTransform();
+
+                } else if (e.touches.length === 2 && isPinching) {
+                // 双指缩放
+                const touch1 = e.touches[0];
+                const touch2 = e.touches[1];
+                const currentDistance = getTouchDistance(touch1, touch2);
+
+                if (initialDistance > 0) {
+                    const newScale = Math.min(Math.max(
+                    initialScale * (currentDistance / initialDistance),
+                    0.3
+                    ), 4);
+                    scale = newScale;
+                    updateTransform();
+                }
+                }
+
+                e.preventDefault();
+            }, { passive: false });
+
+            mermaidElement.addEventListener('touchend', (e) => {
+                // 重置状态
+                if (e.touches.length === 0) {
+                isDragging = false;
+                isPinching = false;
+                initialDistance = 0;
+
+                // 延迟重置isTouch，避免鼠标事件立即触发
+                setTimeout(() => {
+                    isTouch = false;
+                }, 100);
+                } else if (e.touches.length === 1 && isPinching) {
+                // 从双指变为单指，切换为拖动模式
+                isPinching = false;
+                isDragging = true;
+
+                const touch = e.touches[0];
+                startX = touch.clientX - translateX;
+                startY = touch.clientY - translateY;
+                }
+
+                updateTransform();
+            });
+
+            mermaidElement.addEventListener('touchcancel', (e) => {
+                isDragging = false;
+                isPinching = false;
+                initialDistance = 0;
+
+                setTimeout(() => {
+                isTouch = false;
+                }, 100);
+
+                updateTransform();
+            });
+
+            // Enhanced wheel zoom with better center point handling
+            container.addEventListener('wheel', (e) => {
+                e.preventDefault();
+                const rect = container.getBoundingClientRect();
+                const centerX = rect.width / 2;
+                const centerY = rect.height / 2;
+
+                const delta = e.deltaY > 0 ? 0.9 : 1.1;
+                const newScale = Math.min(Math.max(scale * delta, 0.3), 4);
+
+                // Adjust translation to zoom towards center
+                if (newScale !== scale) {
+                const scaleDiff = newScale / scale;
+                translateX = translateX * scaleDiff;
+                translateY = translateY * scaleDiff;
+                scale = newScale;
+
+                if (scale <= 1) {
+                    translateX = 0;
+                    translateY = 0;
+                }
+
+                updateTransform();
+                }
+            });
+
+            // Initialize display
+            updateTransform();
+            });
+        }
+
+        // Smooth scrolling
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Mobile sidebar toggle
+        function toggleSidebar() {
+            const sidebar = document.getElementById('sidebar');
+            const backdrop = document.getElementById('backdrop');
+            sidebar.classList.toggle('-translate-x-full');
+            backdrop.classList.toggle('hidden');
+        }
+
+        // Close sidebar when clicking on backdrop
+        document.getElementById('backdrop').addEventListener('click', function() {
+            toggleSidebar();
+        });
+
+        // Close sidebar when clicking on a link (mobile)
+        document.querySelectorAll('#sidebar a').forEach(link => {
+            link.addEventListener('click', function() {
+                if (window.innerWidth < 1024) {
+                    toggleSidebar();
+                }
+            });
+        });
+
+        // Handle window resize to ensure proper sidebar state
+        window.addEventListener('resize', function() {
+            const sidebar = document.getElementById('sidebar');
+            const backdrop = document.getElementById('backdrop');
+            if (window.innerWidth >= 1024) {
+                sidebar.classList.remove('-translate-x-full');
+                backdrop.classList.add('hidden');
+            } else {
+                sidebar.classList.add('-translate-x-full');
+                backdrop.classList.add('hidden');
+            }
+        });
+
+        // Animate skill bars on scroll
+        const animateOnScroll = () => {
+            const skillBars = document.querySelectorAll('.skill-bar');
+            skillBars.forEach(bar => {
+                const rect = bar.getBoundingClientRect();
+                const isVisible = rect.top < window.innerHeight && rect.bottom > 0;
+                if (isVisible) {
+                    bar.style.width = bar.style.width;
+                }
+            });
+        };
+
+        window.addEventListener('scroll', animateOnScroll);
+        animateOnScroll(); // Initial check
+    </script>
+  
+
+</body></html>
