@@ -42,3 +42,4 @@ If you want to deploy the entire project (not just dist):
 - Timer calculates Pakistan time (UTC+5) automatically
 - Works perfectly on GitHub Pages static hosting
 
+
