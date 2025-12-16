@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>For Ammara | Mended in Gold</title>
+    <meta name="description" content="A birthday wish, mended in gold." />
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Fonts - Elegant serif for Kintsugi aesthetic -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Noto+Serif+JP:wght@300;400;500&display=swap" rel="stylesheet">
+    
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              serif: ['"Cormorant Garamond"', '"Noto Serif JP"', 'serif'],
+              sans: ['"Cormorant Garamond"', 'sans-serif'],
+            },
+            colors: {
+              'kintsugi': {
+                'dark': '#0a0a0f',
+                'gold': '#d4af37',
+                'gold-light': '#f4d03f',
+                'gold-dark': '#b8860b',
+                'ceramic': '#1a1a2e',
+              }
+            },
+            animation: {
+              'shimmer': 'shimmer 3s linear infinite',
+              'float': 'float 3s ease-in-out infinite',
+            }
+          }
+        }
+      }
+    </script>
+    
+    <style>
+      /* Ensure page loads with black background */
+      html, body {
+        background-color: #0a0a0f;
+      }
+      
+      /* Preloader - prevents flash of unstyled content */
+      .preloader {
+        position: fixed;
+        inset: 0;
+        background: #0a0a0f;
+        z-index: 9999;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: opacity 0.5s ease-out;
+      }
+      
+      .preloader.loaded {
+        opacity: 0;
+        pointer-events: none;
+      }
+      
+      /* Custom scrollbar */
+      ::-webkit-scrollbar {
+        width: 6px;
+      }
+      ::-webkit-scrollbar-track {
+        background: #0a0a0f;
+      }
+      ::-webkit-scrollbar-thumb {
+        background: linear-gradient(180deg, #d4af37, #b8860b);
+        border-radius: 3px;
+      }
+    </style>
+
+
+    <script type="importmap">
+      {
+        "imports": {
+          "react-dom/": "https://esm.sh/react-dom@^19.2.3/",
+          "framer-motion": "https://esm.sh/framer-motion@^12.23.26",
+          "react/": "https://esm.sh/react@^19.2.3/",
+          "react": "https://esm.sh/react@^19.2.3",
+          "react-confetti": "https://esm.sh/react-confetti@^6.4.0"
+        }
+      }
+    </script>
+    <script type="module" crossorigin src="/assets/index-BgmVOa-e.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/index-tn0RQdqM.css">
+  </head>
+  <body>
+    <!-- Preloader -->
+    <div class="preloader" id="preloader">
+      <svg width="60" height="60" viewBox="0 0 100 100">
+        <path
+          d="M50 88 C20 60, 5 40, 15 25 C25 10, 40 10, 50 25 C60 10, 75 10, 85 25 C95 40, 80 60, 50 88Z"
+          fill="none"
+          stroke="#d4af37"
+          stroke-width="2"
+          stroke-dasharray="200"
+          stroke-dashoffset="200"
+        >
+          <animate attributeName="stroke-dashoffset" from="200" to="0" dur="1.5s" fill="freeze" />
+        </path>
+      </svg>
+    </div>
+    
+    <div id="root"></div>
+    
+    <script>
+      // Remove preloader after page loads
+      window.addEventListener('load', () => {
+        setTimeout(() => {
+          document.getElementById('preloader').classList.add('loaded');
+        }, 1000);
+      });
+    </script>
+  </body>
+</html>
