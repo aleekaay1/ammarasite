@@ -16,7 +16,6 @@ export const LockScreen: React.FC<LockScreenProps> = ({ onUnlock }) => {
     
     if (password.trim().toLowerCase() === 'ali') {
       setSuccess(true);
-      // Unlock immediately when password is correct
       setTimeout(() => {
         onUnlock();
       }, 1500);
@@ -33,7 +32,6 @@ export const LockScreen: React.FC<LockScreenProps> = ({ onUnlock }) => {
         animate={{ opacity: 1, scale: 1 }}
         className="max-w-md w-full text-center"
       >
-        {/* Header */}
         <motion.div
           initial={{ y: -20, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
@@ -41,14 +39,10 @@ export const LockScreen: React.FC<LockScreenProps> = ({ onUnlock }) => {
           className="mb-8"
         >
           <h2 className="text-3xl md:text-4xl font-serif text-amber-200 mb-4">
-            Welcome
+            Enter Password
           </h2>
-          <p className="text-amber-500/60 text-sm">
-            Enter the password to unlock
-          </p>
         </motion.div>
 
-        {/* Password Form */}
         <motion.div
           initial={{ y: 20, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
@@ -119,7 +113,6 @@ export const LockScreen: React.FC<LockScreenProps> = ({ onUnlock }) => {
           </form>
         </motion.div>
 
-        {/* Decorative elements */}
         <div className="absolute inset-0 pointer-events-none overflow-hidden -z-10">
           {[...Array(10)].map((_, i) => (
             <motion.div

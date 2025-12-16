@@ -3,7 +3,6 @@ import { motion, useScroll, useTransform, useSpring, AnimatePresence } from 'fra
 import Confetti from 'react-confetti';
 import { KintsugiHeart } from './components/KintsugiHeart';
 import { MusicPlayer } from './components/MusicPlayer';
-import { LockScreen } from './components/LockScreen';
 import { WindowSize } from './types';
 
 // Custom hook for window size
@@ -42,7 +41,6 @@ const GoldParticle: React.FC<{ delay: number }> = ({ delay }) => (
 );
 
 const App: React.FC = () => {
-  const [isUnlocked, setIsUnlocked] = useState(false);
   const [wishMade, setWishMade] = useState(false);
   const [showConfetti, setShowConfetti] = useState(false);
   const { width, height } = useWindowSize();
@@ -72,27 +70,8 @@ const App: React.FC = () => {
     }, 300);
   };
 
-  const handleUnlock = () => {
-    setIsUnlocked(true);
-    // Store in sessionStorage so it persists during the session
-    sessionStorage.setItem('unlocked', 'true');
-  };
-
-  // Check if already unlocked in this session
-  useEffect(() => {
-    const stored = sessionStorage.getItem('unlocked');
-    if (stored === 'true') {
-      setIsUnlocked(true);
-    }
-  }, []);
-
   // Confetti config with gold colors
   const confettiColors = ['#d4af37', '#f4d03f', '#b8860b', '#ffd700', '#ffec8b', '#fff8dc'];
-
-  // Show lock screen if not unlocked
-  if (!isUnlocked) {
-    return <LockScreen onUnlock={handleUnlock} />;
-  }
 
   return (
     <div ref={containerRef} className="relative w-full overflow-hidden bg-[#0a0a0f] selection:bg-amber-500/30 selection:text-amber-200">

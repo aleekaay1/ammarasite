@@ -30,8 +30,7 @@ If you want to deploy the entire project (not just dist):
 ## Features Implemented
 
 - ✅ Password protection: "Ali" (hint: "The name of your favorite guy")
-- ✅ Timer countdown to Dec 17, 00:00 PKT (Pakistan time)
-- ✅ Website unlocks only when both password is correct AND timer reaches zero
+- ✅ Website unlocks immediately when correct password is entered
 - ✅ Confetti stops after 5 seconds
 - ✅ Session persistence (stays unlocked during browser session)
 
@@ -39,7 +38,6 @@ If you want to deploy the entire project (not just dist):
 
 - The lock screen uses client-side JavaScript only (no backend required)
 - Password and unlock state are stored in sessionStorage
-- Timer calculates Pakistan time (UTC+5) automatically
 - Works perfectly on GitHub Pages static hosting
 
 
